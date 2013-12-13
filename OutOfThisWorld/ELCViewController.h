@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ELCSpaceObjectsTableViewController.h";
 
 @interface ELCViewController : UIViewController
 
