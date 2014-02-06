@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A787760C-3728-424E-A6D1-F25720FBEAF6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>OutOfThisWorld</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8C07A9FE-C09C-49C3-BFDF-7406B700559B</key>
+		<string>https://github.com/elizacooper/OutOfThisWorld.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>OutOfThisWorld.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8C07A9FE-C09C-49C3-BFDF-7406B700559B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/elizacooper/OutOfThisWorld.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8C07A9FE-C09C-49C3-BFDF-7406B700559B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8C07A9FE-C09C-49C3-BFDF-7406B700559B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>OutOfThisWorld</string>
+		</dict>
+	</array>
+</dict>
+</plist>

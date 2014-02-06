@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C93D3F4918888CC60082B63F /* ELCSpaceImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93D3F4818888CC60082B63F /* ELCSpaceImageViewController.m */; };
 		C9495C5F181DAE3900F41065 /* AstronomicalData.m in Sources */ = {isa = PBXBuildFile; fileRef = C9495C5E181DAE3900F41065 /* AstronomicalData.m */; };
+		C9A0E00E1875E52600A0AB51 /* ELCTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A0E00D1875E52600A0AB51 /* ELCTableViewCell.m */; };
+		C9A70B0818A159E50059ED44 /* ELCSpaceDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A70B0718A159E50059ED44 /* ELCSpaceDataViewController.m */; };
 		C9CB2DD118182EE400CCED04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CB2DD018182EE400CCED04 /* Foundation.framework */; };
 		C9CB2DD318182EE400CCED04 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CB2DD218182EE400CCED04 /* CoreGraphics.framework */; };
 		C9CB2DD518182EE400CCED04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9CB2DD418182EE400CCED04 /* UIKit.framework */; };
@@ -47,8 +50,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C93D3F4718888CC60082B63F /* ELCSpaceImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCSpaceImageViewController.h; sourceTree = "<group>"; };
+		C93D3F4818888CC60082B63F /* ELCSpaceImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCSpaceImageViewController.m; sourceTree = "<group>"; };
 		C9495C5D181DAE3900F41065 /* AstronomicalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AstronomicalData.h; sourceTree = "<group>"; };
 		C9495C5E181DAE3900F41065 /* AstronomicalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstronomicalData.m; sourceTree = "<group>"; };
+		C9A0E00C1875E52600A0AB51 /* ELCTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCTableViewCell.h; sourceTree = "<group>"; };
+		C9A0E00D1875E52600A0AB51 /* ELCTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCTableViewCell.m; sourceTree = "<group>"; };
+		C9A70B0618A159E50059ED44 /* ELCSpaceDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELCSpaceDataViewController.h; sourceTree = "<group>"; };
+		C9A70B0718A159E50059ED44 /* ELCSpaceDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELCSpaceDataViewController.m; sourceTree = "<group>"; };
 		C9CB2DCD18182EE400CCED04 /* OutOfThisWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OutOfThisWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CB2DD018182EE400CCED04 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C9CB2DD218182EE400CCED04 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -144,10 +153,16 @@
 				C9CB2DDF18182EE400CCED04 /* ELCAppDelegate.h */,
 				C9CB2DE018182EE400CCED04 /* ELCAppDelegate.m */,
 				C9CB2DE218182EE400CCED04 /* Main.storyboard */,
+				C9A70B0618A159E50059ED44 /* ELCSpaceDataViewController.h */,
+				C9A70B0718A159E50059ED44 /* ELCSpaceDataViewController.m */,
 				C9CB2DE518182EE400CCED04 /* ELCViewController.h */,
 				C9CB2DE618182EE400CCED04 /* ELCViewController.m */,
 				C9CEF91F181AC30800231EE5 /* ELCSpaceObjectsTableViewController.h */,
 				C9CEF920181AC30800231EE5 /* ELCSpaceObjectsTableViewController.m */,
+				C93D3F4718888CC60082B63F /* ELCSpaceImageViewController.h */,
+				C93D3F4818888CC60082B63F /* ELCSpaceImageViewController.m */,
+				C9A0E00C1875E52600A0AB51 /* ELCTableViewCell.h */,
+				C9A0E00D1875E52600A0AB51 /* ELCTableViewCell.m */,
 				C9CB66CF1856631B007BCF2D /* OWSpaceObject.h */,
 				C9CB66D01856631B007BCF2D /* OWSpaceObject.m */,
 				C9495C5D181DAE3900F41065 /* AstronomicalData.h */,
@@ -314,11 +329,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9495C5F181DAE3900F41065 /* AstronomicalData.m in Sources */,
+				C9A0E00E1875E52600A0AB51 /* ELCTableViewCell.m in Sources */,
+				C93D3F4918888CC60082B63F /* ELCSpaceImageViewController.m in Sources */,
 				C9CEF921181AC30800231EE5 /* ELCSpaceObjectsTableViewController.m in Sources */,
 				C9CB2DDD18182EE400CCED04 /* main.m in Sources */,
 				C9CB2DE718182EE400CCED04 /* ELCViewController.m in Sources */,
 				C9CB2DE118182EE400CCED04 /* ELCAppDelegate.m in Sources */,
 				C9CB66D11856631B007BCF2D /* OWSpaceObject.m in Sources */,
+				C9A70B0818A159E50059ED44 /* ELCSpaceDataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

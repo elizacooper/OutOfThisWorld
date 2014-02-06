@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "OWSpaceObject.h"
 
 @interface ELCSpaceObjectsTableViewController : UITableViewController
 @property (strong, nonatomic) NSMutableArray *planets;
+@property (strong, nonatomic) NSObject *OWSpaceObject;
+@property (strong, nonatomic) NSMutableArray *addedSpaceObjects;
 
 @end
+
+[UITableView setBackgroundView:nil];

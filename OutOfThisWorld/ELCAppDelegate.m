@@ -8,6 +8,8 @@
 
 #import "ELCAppDelegate.h"
 #import "ELCSpaceObjectsTableViewController.h"
+#import "ELCTableViewCell.h"
+#import "ELCSpaceDataViewController.h"
 
 @implementation ELCAppDelegate
 

@@ -8,6 +8,7 @@
 
 #import "ELCViewController.h"
 #import "AstronomicalData.h"
+#import "OWSpaceObject.h"
 
 @interface ELCViewController ()
 

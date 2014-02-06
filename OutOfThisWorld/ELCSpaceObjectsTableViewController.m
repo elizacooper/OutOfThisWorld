@@ -7,6 +7,9 @@
 //
 
 #import "ELCSpaceObjectsTableViewController.h"
+#import "OWSpaceObject.h"
+#import "ELCSpaceImageViewController.h"
+#import "ELCSpaceDataViewController.h"
 
 @interface ELCSpaceObjectsTableViewController ()
 
@@ -27,12 +30,46 @@
 {
     [super viewDidLoad];
 
+}
+
+- (void)prepareForSegue(UIStoryboardSegue*)segue sender(id)sender
+{
+	if ([sender isKindOfclass:[UITableViewCell class]])
+	{
+		if ([segue.destinationViewController isKindOfClass:[ELCSpaceImageViewController class]])
+		{
+			ELCSpaceImageViewController *nextViewController = segue.destinationViewController;
+			NSIndexPath *path = [self.tableView indexPathForCell:sender];
+			OWSpaceObject *selectedObject = self.planets[path.row];
+			nextViewController.spaceObject = selectedObject;
+		}
+	}
+	
+	/* The prepareForSegue method is called right before the viewController transition occurs. Notice that we do introspection to ensure that the Segue is being triggered by the proper sender. In this case we pass in the NSIndexPath of the accessory button pressed. We then confirm that the destination ViewController is the OWSpaceDataViewController. Finally, we create a variable named targetViewController that points to our destination ViewController. Determine the indexPath of the selected cell and use that indexPath to access a OWSpaceObject in our planet array. Finally set the property spaceobject of the variable targetViewController equal to the selected object. */
+	if ([sender isKindOfClass:[NSIndexPath class]])
+	{
+		if ([segue.destinationViewController isKindOfClass:[ELCSpaceDataViewController class]])
+		{
+			ELCSpaceDataViewController *targetViewController = segue.destinationViewController;
+			NSIndexPath *path = sender;
+			OWSpaceObject *selectedObject = self.planets[path.row];
+			targetViewController.spaceObject = selectedObject;
+		}
+	}
+}
+
+	- (void)tableView:(UITableView*) tableView didSelectRowAtIndexPath:(NSIndexPath*) indexPath
+{
+	ELCSpaceImageViewController *viewController = [[ELCSpaceImageViewController alloc] init];
+	[self.navigationController pushViewController:viewController animated:YES];
+}
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -44,23 +81,27 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
-    return 1;
+	if ([self.addedSpaceObjects count])
+	{
+		return 2;
+	}
+	else
+	{
+	return 1;
+}
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return [self.planets count];
-	if (section == 0)
+	if (section == 1)
 	{
-		return 3;
+		return [self.addedSpaceObjectsCount];
 	}
 	else
 	{
-		return 2;
+    return [self.planets count];
 	}
-	}
+}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -71,6 +112,11 @@
 	OWSpaceObject *planet =self.planets[indexPath.row];
 
     // Configure the cell...
+	if (indexPath.section == 1)
+		// use new space object to configure the cell
+		{
+		OWSpaceObject *planet = [self.addedSpaceObjects objectAtIndex:indexPath.row];
+	}
 	if (section == 0)
 	{
 		cell.backgroundColor = [UIColor redColor];
@@ -80,8 +126,21 @@
 		cell.backgroundColor = [UIColor blueColor];
 	}
 
-    cell.titleLabel.text = planet.name;
+    cell.textLabel.text = planet.name;
+	cell.detailTextLabel.text = planet.nickname;
+	cell.imageView.image = planet.spaceImage;
+	cell.backgroundColor = [UIColor clearColor];
+	cell.textLabel.textColor = [UIColor whiteColor];
+	cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.5 alpha:1.0];
     return cell;
+}
+
+#pragma mark: UITableView Delegate
+
+/* This method will be called when the user presses the accessory info button the TableViewCells. When the user presses the application should transition using the push segue named "push to space data". */
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+	[self performSegueWithIdentifier:@"push to space data" sender:indexPath];
 }
 
 /*
